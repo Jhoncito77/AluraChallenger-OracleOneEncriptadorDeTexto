@@ -114,7 +114,7 @@ body{
     width: 280px;
     height: 300px;
     margin: 70px 10px 0 10px;
-    display: flex;
+    
 
 }
 
@@ -163,8 +163,7 @@ body{
     font-size: 24px;
     line-height: 150%;
     /* or 36px */
-
-
+    
     /* Gray/gray-400 */
 
     color: #495057;
@@ -179,4 +178,8 @@ body{
     left: 10px;
     bottom: 40px;
 
+}
+
+.ocultar{
+    display: none;
 }
