@@ -36,12 +36,46 @@ body{
     position: absolute;
     left: 15%;
     bottom: 200px;
+    height: 90px;
+    
 }
+
+.alert{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    margin-bottom: 10px;
+    width: 205px;
+    height: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+    opacity: 0.8;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
 
 .boton{
     display: inline;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 24px;
     gap: 8px;
     width: 280px;
@@ -51,7 +85,7 @@ body{
     flex: none;
     order: 0;
     flex-grow: 0;
-    
+    margin-top: 20px;
 }
 
 #encriptar{
@@ -182,4 +216,109 @@ body{
 
 .ocultar{
     display: none;
+}
+
+
+@media screen and (max-width:768px){
+    .rectangulo{
+        width: 688px;
+        height: 300px;
+        left: 20px;
+        top: 750px;
+        right: 20px;
+    }
+
+    #botones{
+        width: 688px;
+        height: 153px;
+        left: 20px;
+        top: 680px;
+        
+    }
+
+    .boton{
+        margin-top: 20px;
+        width: 300px;
+        margin: 20px 10px 0 10px;
+    }
+
+    #imagen{
+        display: none;
+    }
+
+    .mensaje{
+        top: 50px;
+        width: 648px;
+    }
+
+    #mensaje-pequeño{
+        top: 88px;
+        width: 648px;
+    }
+
+    #footer{
+        position: absolute;
+        left: 300px;
+        top: 1150px;
+        
+    }
+
+    footer{
+        bottom: 20px;
+    }
+
+    #respuesta{
+        width: 648px;
+        height: 150px;
+    }
+
+    #copiar{
+        width: 668px;
+    }
+}
+
+@media screen and (max-width:375px){
+    #texto{
+        width: 365px;
+        height: 350px;
+        left: 5px;
+        right: 5px;
+    }
+
+    #botones{
+        top: 550px;
+        width: 365px;
+        left: 5px;
+        right: 5px;
+        margin-top: 20px;
+    }
+
+    .boton{
+        display: block;
+        
+    }
+
+    #encriptar, #desencriptar{
+        left: 10px;
+        width: 345px;
+        margin: 20px 0 5px;
+        
+        height: 61px;
+    }
+
+    .rectangulo{
+        width: 360px;
+        left: 5px;
+        right: 5px;
+        top: 650px;
+    }
+
+    #respuesta, .mensaje, #copiar, #mensaje-pequeño, #footer{
+        width: 350px;
+        right: 5px;
+        left: 5px;
+    }
+    #footer{
+        top: 1050px;
+    }
 }

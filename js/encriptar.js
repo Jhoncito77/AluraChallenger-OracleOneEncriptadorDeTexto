@@ -10,6 +10,7 @@ botonEncriptar.addEventListener("click",function(){
     let mensajeMostrado = document.querySelector("#respuesta");
     let imagenAOcultar = document.querySelector("#imagen");
     imagenAOcultar.classList.add("ocultar");
+    botonCopiar.classList.remove("ocultar");
     let textosAOcultar = document.querySelectorAll(".mensaje");
     for(let i=0;i<textosAOcultar.length;i++){
         textosAOcultar[i].classList.add("ocultar");
@@ -17,6 +18,7 @@ botonEncriptar.addEventListener("click",function(){
     mensajeMostrado.textContent = textoEncriptado;
     if(document.querySelector("#texto").value == ""){
         imagenAOcultar.classList.remove("ocultar");
+        botonCopiar.classList.add("ocultar");
         for(let i=0;i<textosAOcultar.length;i++){
             textosAOcultar[i].classList.remove("ocultar");
         }
@@ -35,9 +37,10 @@ botonDesencriptar.addEventListener("click",function(){
         textosAOcultar[i].classList.add("ocultar");
     }
     mensajeMostrado.textContent = textoDesencriptado;
-
+    botonCopiar.classList.remove("ocultar");
     if(document.querySelector("#texto").value == ""){
         imagenAOcultar.classList.remove("ocultar");
+        botonCopiar.classList.add("ocultar")
         for(let i=0;i<textosAOcultar.length;i++){
             textosAOcultar[i].classList.remove("ocultar");
         }
@@ -79,7 +82,7 @@ function encriptar (texto){
         }
         
     }
-
+    
     return mensajeEncriptado;
 }
 
